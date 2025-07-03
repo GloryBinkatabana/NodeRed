@@ -1,0 +1,1406 @@
+[
+    {
+        "id": "08792b27236ea143",
+        "type": "tab",
+        "label": "Temperature Flow",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "0c8e668cbf09d532",
+        "type": "tab",
+        "label": "TDS Sensor Flow",
+        "disabled": false,
+        "info": "Purpose: Measures the concentration of dissolved solids (minerals, salts, metals) in water.\r\n\r\nFlow:\r\n\r\n    serial in: Reads raw TDS data from the sensor.\r\n\r\n    function: Processes the data to calculate TDS in ppm.\r\n\r\n    gauge: Displays TDS levels on the dashboard.\r\n\r\nKey Feature: Helps assess water purity and nutrient levels.",
+        "env": []
+    },
+    {
+        "id": "681d1b402df8a6b4",
+        "type": "tab",
+        "label": "Turbidity Sensor Flow",
+        "disabled": false,
+        "info": "Purpose: Detects water clarity by measuring light scattering (indicates debris, algae, or contamination).\r\n\r\nFlow:\r\n\r\n    mqtt in: Receives turbidity data from the sensor.\r\n\r\n    function: Processes the data to calculate turbidity levels (e.g., NTU).\r\n\r\n    chart: Displays historical turbidity trends on the dashboard.\r\n\r\nKey Feature: Monitors water quality to prevent contamination.",
+        "env": []
+    },
+    {
+        "id": "a0e413249df8f3be",
+        "type": "serial-port",
+        "name": "",
+        "serialport": "dev/ttyUSB0",
+        "serialbaud": "9600",
+        "databits": 8,
+        "parity": "none",
+        "stopbits": 1,
+        "waitfor": "",
+        "dtr": "none",
+        "rts": "none",
+        "cts": "none",
+        "dsr": "none",
+        "newline": "\\n",
+        "bin": "false",
+        "out": "char",
+        "addchar": "",
+        "responsetimeout": 10000
+    },
+    {
+        "id": "17db9974d76b0c69",
+        "type": "serial-port",
+        "name": "",
+        "serialport": "dev/ttyUSB0",
+        "serialbaud": "9600",
+        "databits": 8,
+        "parity": "none",
+        "stopbits": 1,
+        "waitfor": "",
+        "dtr": "none",
+        "rts": "none",
+        "cts": "none",
+        "dsr": "none",
+        "newline": "\\n",
+        "bin": "false",
+        "out": "char",
+        "addchar": "",
+        "responsetimeout": 10000
+    },
+    {
+        "id": "11aa01ae360d5312",
+        "type": "serial-port",
+        "name": "",
+        "serialport": "dev/ttyUSB0",
+        "serialbaud": "9600",
+        "databits": 8,
+        "parity": "none",
+        "stopbits": 1,
+        "waitfor": "",
+        "dtr": "none",
+        "rts": "none",
+        "cts": "none",
+        "dsr": "none",
+        "newline": "\\n",
+        "bin": "false",
+        "out": "char",
+        "addchar": "",
+        "responsetimeout": 10000
+    },
+    {
+        "id": "4188575d8a22cce9",
+        "type": "serial-port",
+        "name": "",
+        "serialport": "dev/ttyUSB0",
+        "serialbaud": "9600",
+        "databits": 8,
+        "parity": "none",
+        "stopbits": 1,
+        "waitfor": "",
+        "dtr": "none",
+        "rts": "none",
+        "cts": "none",
+        "dsr": "none",
+        "newline": "\\n",
+        "bin": "false",
+        "out": "char",
+        "addchar": "",
+        "responsetimeout": 10000
+    },
+    {
+        "id": "55f953823e5111ce",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "localhost:1883",
+        "port": 1883,
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": 4,
+        "keepalive": 60,
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "2a73ad1b666857bb",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "localhost:1883",
+        "port": 1883,
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": 4,
+        "keepalive": 60,
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "d8f142bfd24ae286",
+        "type": "mqtt-broker",
+        "name": "AquaponicsMQTT",
+        "broker": "localhost",
+        "port": 1883,
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": 4,
+        "keepalive": 60,
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "460ebac72f4c29ed",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "localhost:1883",
+        "port": 1883,
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": 4,
+        "keepalive": 60,
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "f04595ef7e18548c",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "localhost:1883",
+        "port": 1883,
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": 4,
+        "keepalive": 60,
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "9b623cd28bfbcf42",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "localhost:1883",
+        "port": 1883,
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": 4,
+        "keepalive": 60,
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "514d9ead4878fbb3",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "localhost:1883",
+        "port": 1883,
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": 4,
+        "keepalive": 60,
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "ca46ba00e09c1f67",
+        "type": "ui_tab",
+        "name": "Aquaponics system",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "f67efb9c3d905ffe",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-dark",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "Copperplate,Copperplate Gothic Light,fantasy",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#770914",
+                "baseFont": "Copperplate,Copperplate Gothic Light,fantasy",
+                "edited": true,
+                "reset": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#097479",
+                    "value": "#770914",
+                    "edited": true
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#770914",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#be0e20",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#555555",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#eeeeee",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#770914",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "Copperplate,Copperplate Gothic Light,fantasy"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "🌊Flying Dutchman🚢",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "f87faf9762d6602b",
+        "type": "ui_group",
+        "name": "The Flying Dutchman",
+        "tab": "ca46ba00e09c1f67",
+        "order": 1,
+        "disp": true,
+        "width": 28,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "365c810105448d76",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "",
+        "port": 1883,
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": 4,
+        "keepalive": 60,
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "3fecf97e3c575169",
+        "type": "mqtt-broker",
+        "name": "AquaponicsMQTT",
+        "broker": "527cc327095a44d19f1f1dd6291d4a06.s1.eu.hivemq.cloud",
+        "port": 1883,
+        "tls": "",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": true,
+        "protocolVersion": 4,
+        "keepalive": 60,
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "b30de00f7f77044f",
+        "type": "mqtt-broker",
+        "name": "Our server",
+        "broker": "527cc327095a44d19f1f1dd6291d4a06.s1.eu.hivemq.cloud",
+        "port": "8883",
+        "tls": "",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": true,
+        "protocolVersion": 4,
+        "keepalive": 60,
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "0dcb1f8fdc83dbc4",
+        "type": "node-red-contrib-whatsapp-cmb-account",
+        "name": "WhatsApp Account G"
+    },
+    {
+        "id": "b0d5a6ef96c5b890",
+        "type": "ui_group",
+        "name": "Group 1",
+        "tab": "",
+        "order": 1,
+        "disp": true,
+        "width": 6
+    },
+    {
+        "id": "4f4b32a27125e3a9",
+        "type": "ui_group",
+        "name": "Group 2",
+        "tab": "",
+        "order": 2,
+        "disp": true,
+        "width": 6
+    },
+    {
+        "id": "3d265b7a00ca5be0",
+        "type": "node-red-contrib-whatsapp-cmb-account",
+        "name": "Shreyansh's Whatsapp"
+    },
+    {
+        "id": "77f9e8ae0e54692f",
+        "type": "debug",
+        "z": "08792b27236ea143",
+        "name": "Temp Debug",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "alert",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 870,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "a5b24b2453f5dee1",
+        "type": "node-red-contrib-whatsapp-cmb-send-message",
+        "z": "08792b27236ea143",
+        "name": "Whatsapp Alert",
+        "credtype": "account",
+        "account": "0dcb1f8fdc83dbc4",
+        "text": "alert",
+        "phonenumbervalue": "",
+        "apikeyvalue": "",
+        "apikeyinputtypemessage": "msg",
+        "phonenumberinputtypemessage": "msg",
+        "inputtypemessage": "msg",
+        "rejectssl": true,
+        "x": 880,
+        "y": 200,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a9aadbe76415bcd9",
+        "type": "mqtt in",
+        "z": "08792b27236ea143",
+        "name": "Temperature Input",
+        "topic": "esp32/sensors/temperature",
+        "qos": "0",
+        "datatype": "utf8",
+        "broker": "b30de00f7f77044f",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 130,
+        "y": 300,
+        "wires": [
+            [
+                "96779d630eab6c38"
+            ]
+        ]
+    },
+    {
+        "id": "96779d630eab6c38",
+        "type": "function",
+        "z": "08792b27236ea143",
+        "name": "Check Tempreature",
+        "func": "// Convert payload to a number\nlet temperature = Number(msg.payload);\nlet temp_threshold = 25;\n\n// Check temperature conditions and add properties for routing\nif (temperature > temp_threshold) {\n    msg.alert = `Temperature is above ${temp_threshold}!`;\n} else {\n    msg.alert = null; // No alert needed\n}\n\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 350,
+        "y": 240,
+        "wires": [
+            [
+                "defdfbad6d4558d3",
+                "d413fbb6cc63c896",
+                "e3a23c7c2e62d333"
+            ]
+        ]
+    },
+    {
+        "id": "defdfbad6d4558d3",
+        "type": "switch",
+        "z": "08792b27236ea143",
+        "name": "Check If Needed To Alert",
+        "property": "alert",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "nnull"
+            },
+            {
+                "t": "true"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 610,
+        "y": 240,
+        "wires": [
+            [
+                "a5b24b2453f5dee1",
+                "77f9e8ae0e54692f"
+            ],
+            [
+                "a5b24b2453f5dee1",
+                "77f9e8ae0e54692f"
+            ]
+        ]
+    },
+    {
+        "id": "f830de45ff0be384",
+        "type": "inject",
+        "z": "08792b27236ea143",
+        "name": "Test Value: 30",
+        "props": [
+            {
+                "p": "topic",
+                "vt": "str"
+            },
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "30",
+        "payloadType": "str",
+        "x": 110,
+        "y": 240,
+        "wires": [
+            [
+                "96779d630eab6c38"
+            ]
+        ]
+    },
+    {
+        "id": "67cc8a29926ef7a7",
+        "type": "inject",
+        "z": "08792b27236ea143",
+        "name": "Test Value: 0",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "0",
+        "payloadType": "str",
+        "x": 110,
+        "y": 180,
+        "wires": [
+            [
+                "96779d630eab6c38"
+            ]
+        ]
+    },
+    {
+        "id": "d413fbb6cc63c896",
+        "type": "ui_gauge",
+        "z": "08792b27236ea143",
+        "name": "",
+        "group": "f87faf9762d6602b",
+        "order": 3,
+        "width": 12,
+        "height": 5,
+        "gtype": "gage",
+        "title": "Temperature",
+        "label": "°C",
+        "format": "{{msg.payload}}",
+        "min": "10",
+        "max": "40",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 570,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "e3a23c7c2e62d333",
+        "type": "ui_chart",
+        "z": "08792b27236ea143",
+        "name": "Temperature Chart",
+        "group": "f87faf9762d6602b",
+        "order": 5,
+        "width": 12,
+        "height": 5,
+        "label": "Temperature",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "20",
+        "ymax": "30",
+        "removeOlder": "1",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "60",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 590,
+        "y": 400,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "c05a3539c5703866",
+        "type": "ui_gauge",
+        "z": "0c8e668cbf09d532",
+        "name": "TDS Gauge",
+        "group": "f87faf9762d6602b",
+        "order": 16,
+        "width": 12,
+        "height": 5,
+        "gtype": "gage",
+        "title": "TDS",
+        "label": "ppm",
+        "format": "{{msg.payload}}",
+        "min": 0,
+        "max": "2000",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 570,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "7dfe58de2c2cb461",
+        "type": "debug",
+        "z": "0c8e668cbf09d532",
+        "name": "TDS Debug",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1050,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "ba5d7c4f7c43b0b2",
+        "type": "switch",
+        "z": "0c8e668cbf09d532",
+        "name": "Check TDS Range",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "true"
+            },
+            {
+                "t": "false"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 650,
+        "y": 40,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "c4f3ca48589b1f8d",
+        "type": "debug",
+        "z": "0c8e668cbf09d532",
+        "name": "TDS Debug",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "alert",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 870,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "b77e3e212e925556",
+        "type": "node-red-contrib-whatsapp-cmb-send-message",
+        "z": "0c8e668cbf09d532",
+        "name": "Whatsapp Alert",
+        "credtype": "account",
+        "account": "0dcb1f8fdc83dbc4",
+        "text": "alert",
+        "phonenumbervalue": "",
+        "apikeyvalue": "",
+        "apikeyinputtypemessage": "msg",
+        "phonenumberinputtypemessage": "msg",
+        "inputtypemessage": "msg",
+        "rejectssl": true,
+        "x": 880,
+        "y": 320,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "1cf4bd698626df7b",
+        "type": "switch",
+        "z": "0c8e668cbf09d532",
+        "name": "Check If Needed To Alert",
+        "property": "alert",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "nnull"
+            },
+            {
+                "t": "true"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 610,
+        "y": 340,
+        "wires": [
+            [
+                "b77e3e212e925556",
+                "c4f3ca48589b1f8d"
+            ],
+            [
+                "b77e3e212e925556",
+                "c4f3ca48589b1f8d"
+            ]
+        ]
+    },
+    {
+        "id": "056e9b97356d1810",
+        "type": "inject",
+        "z": "0c8e668cbf09d532",
+        "name": "Test Value: 2000",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "2000",
+        "payloadType": "str",
+        "x": 140,
+        "y": 340,
+        "wires": [
+            [
+                "cf0fb486261293c8"
+            ]
+        ]
+    },
+    {
+        "id": "c2a5343e33f25692",
+        "type": "inject",
+        "z": "0c8e668cbf09d532",
+        "name": "Test Value: 20",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "20",
+        "payloadType": "str",
+        "x": 130,
+        "y": 220,
+        "wires": [
+            [
+                "cf0fb486261293c8"
+            ]
+        ]
+    },
+    {
+        "id": "cf0fb486261293c8",
+        "type": "function",
+        "z": "0c8e668cbf09d532",
+        "name": "Check TDS Levels",
+        "func": "// Convert payload to a number\nlet value = Number(msg.payload);\n\n// Define thresholds\nlet threshold = 1000;\n\n// Initialize alert message\nmsg.alert = null;\n\n// Check and assign alert message based on thresholds\nif (value > threshold) {\n    msg.alert = \"TDS too high\";\n}\n\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 370,
+        "y": 340,
+        "wires": [
+            [
+                "1cf4bd698626df7b",
+                "c05a3539c5703866",
+                "2f78e5e4d8c7688e"
+            ]
+        ]
+    },
+    {
+        "id": "652f830901f21ec8",
+        "type": "mqtt in",
+        "z": "0c8e668cbf09d532",
+        "name": "TDS Input",
+        "topic": "esp32/sensors/tds",
+        "qos": "0",
+        "datatype": "utf8",
+        "broker": "b30de00f7f77044f",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 120,
+        "y": 400,
+        "wires": [
+            [
+                "cf0fb486261293c8"
+            ]
+        ]
+    },
+    {
+        "id": "c0c2bb8551f73045",
+        "type": "inject",
+        "z": "0c8e668cbf09d532",
+        "name": "Test Value: 200",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "200",
+        "payloadType": "str",
+        "x": 140,
+        "y": 280,
+        "wires": [
+            [
+                "cf0fb486261293c8"
+            ]
+        ]
+    },
+    {
+        "id": "4771f57ebb772375",
+        "type": "comment",
+        "z": "0c8e668cbf09d532",
+        "name": "Does TDS need alert?",
+        "info": "",
+        "x": 380,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "2f78e5e4d8c7688e",
+        "type": "ui_chart",
+        "z": "0c8e668cbf09d532",
+        "name": "TDS Chart",
+        "group": "f87faf9762d6602b",
+        "order": 18,
+        "width": 12,
+        "height": 5,
+        "label": "TDS Chart",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "cubic",
+        "nodata": "",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "2000",
+        "removeOlder": "1",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "60",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 570,
+        "y": 460,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "4f1ddfdf1b1ad599",
+        "type": "ui_chart",
+        "z": "681d1b402df8a6b4",
+        "name": "Turbidity Chart",
+        "group": "f87faf9762d6602b",
+        "order": 31,
+        "width": 12,
+        "height": 5,
+        "label": "Turbidity (NTU)",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "cubic",
+        "nodata": "",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "4000",
+        "removeOlder": "30",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "1",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 620,
+        "y": 560,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "2bbb1b46376cb04d",
+        "type": "debug",
+        "z": "681d1b402df8a6b4",
+        "name": "Turbidity Debug",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "alert",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 920,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "6a07d6d297b119c9",
+        "type": "node-red-contrib-whatsapp-cmb-send-message",
+        "z": "681d1b402df8a6b4",
+        "name": "Whatsapp Alert",
+        "credtype": "account",
+        "account": "0dcb1f8fdc83dbc4",
+        "text": "alert",
+        "phonenumbervalue": "",
+        "apikeyvalue": "",
+        "apikeyinputtypemessage": "msg",
+        "phonenumberinputtypemessage": "msg",
+        "inputtypemessage": "msg",
+        "rejectssl": true,
+        "x": 960,
+        "y": 300,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d3b9444a85394dfc",
+        "type": "switch",
+        "z": "681d1b402df8a6b4",
+        "name": "Check If Needed To Alert",
+        "property": "alert",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "nnull"
+            },
+            {
+                "t": "true"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 650,
+        "y": 380,
+        "wires": [
+            [
+                "6a07d6d297b119c9",
+                "2bbb1b46376cb04d"
+            ],
+            [
+                "6a07d6d297b119c9",
+                "2bbb1b46376cb04d"
+            ]
+        ]
+    },
+    {
+        "id": "269e81f56b4a5ab5",
+        "type": "inject",
+        "z": "681d1b402df8a6b4",
+        "name": "Test Value: 2000",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "2000",
+        "payloadType": "str",
+        "x": 120,
+        "y": 380,
+        "wires": [
+            [
+                "290de9ad13504da8"
+            ]
+        ]
+    },
+    {
+        "id": "fdaddc79216ff98e",
+        "type": "inject",
+        "z": "681d1b402df8a6b4",
+        "name": "Test Value: 20",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "20",
+        "payloadType": "str",
+        "x": 110,
+        "y": 260,
+        "wires": [
+            [
+                "290de9ad13504da8"
+            ]
+        ]
+    },
+    {
+        "id": "290de9ad13504da8",
+        "type": "function",
+        "z": "681d1b402df8a6b4",
+        "name": "Check Turbidity Levels",
+        "func": "// Convert payload to a number\nlet value = Number(msg.payload);\n\n// Define thresholds\nlet threshold = 900;\n\n// Initialize alert message\nmsg.alert = null;\n\n// Check and assign alert message based on thresholds\nif (value > threshold) {\n    msg.alert = \"Turbidity too high as it is currently ${value}\";\n}\n\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 360,
+        "y": 380,
+        "wires": [
+            [
+                "d3b9444a85394dfc",
+                "e523759a33bddae0",
+                "4f1ddfdf1b1ad599"
+            ]
+        ]
+    },
+    {
+        "id": "33c97097e42e7374",
+        "type": "mqtt in",
+        "z": "681d1b402df8a6b4",
+        "name": "Turbidity Input",
+        "topic": "esp32/sensors/turbidity",
+        "qos": "0",
+        "datatype": "utf8",
+        "broker": "b30de00f7f77044f",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 110,
+        "y": 440,
+        "wires": [
+            [
+                "290de9ad13504da8"
+            ]
+        ]
+    },
+    {
+        "id": "3bccf8f93db05b38",
+        "type": "inject",
+        "z": "681d1b402df8a6b4",
+        "name": "Test Value: 200",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "200",
+        "payloadType": "str",
+        "x": 120,
+        "y": 320,
+        "wires": [
+            [
+                "290de9ad13504da8"
+            ]
+        ]
+    },
+    {
+        "id": "6f67140b47af7a28",
+        "type": "comment",
+        "z": "681d1b402df8a6b4",
+        "name": "Does Turbidity need alert?",
+        "info": "",
+        "x": 370,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "e523759a33bddae0",
+        "type": "ui_gauge",
+        "z": "681d1b402df8a6b4",
+        "name": "Turbidity Guage",
+        "group": "f87faf9762d6602b",
+        "order": 29,
+        "width": 12,
+        "height": 5,
+        "gtype": "gage",
+        "title": "Turbidity",
+        "label": "ntu",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "4000",
+        "colors": [
+            "#17edfd",
+            "#e600de",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 620,
+        "y": 460,
+        "wires": []
+    }
+]
